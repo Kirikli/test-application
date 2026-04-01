@@ -48,13 +48,15 @@ public class TaskService {
 
     @Transactional(readOnly = true)
     public PageResponseDTO<TaskDTO> getTaskPage(int page, int size) {
-        Pageable pageable = PageRequest.of(page, size);
+        Pageable pageable =  PageRequest.of(Math.max(page - 1, 0), size);
         Page<Task> tasks = taskRepository.findAll(pageable);
         return PageResponseBuilder.of(tasks, taskMapper::toDto);
     }
 
-    public TaskDTO createTaskSendKafka(CreateTaskDTO createTaskDTO) {
-        Task task = createTask(createTaskDTO);
+    @Transactional
+    public TaskDTO createTask(CreateTaskDTO createTaskDTO) {
+        Task task = taskMapper.toEntity(createTaskDTO);
+        task = taskRepository.save(task);
 
         TaskCreateEvent event = new TaskCreateEvent(
                 task.getId(),
@@ -72,13 +74,6 @@ public class TaskService {
                 });
 
         return taskMapper.toDto(task);
-    }
-
-    @Transactional
-    public Task createTask(CreateTaskDTO createTaskDTO) {
-        Task task = taskMapper.toEntity(createTaskDTO);
-        task = taskRepository.save(task);
-        return task;
     }
 
     @Transactional
@@ -102,8 +97,19 @@ public class TaskService {
         return taskMapper.toDto(taskRepository.save(task));
     }
 
-    public TaskDTO assignExecutorSendKafka(UUID taskId, UUID executorId) {
-        Task task = assignExecutor(taskId, executorId);
+    @Transactional
+    public TaskDTO assignExecutor(UUID taskId, UUID executorId) {
+
+        Task task = taskRepository.findById(taskId)
+                .orElseThrow(() -> new NotFoundException("Task not found"));
+
+        if (task.getExecutor() != null) {
+            throw new IllegalStateException("Task already has executor");
+        }
+
+        User user = userService.findById(executorId);
+        task.setExecutor(user);
+        task = taskRepository.save(task);
 
         AssignExecutorEvent event = new AssignExecutorEvent(
                 task.getId(),
@@ -121,21 +127,5 @@ public class TaskService {
                 });
 
         return taskMapper.toDto(task);
-    }
-
-    @Transactional
-    public Task assignExecutor(UUID taskId, UUID executorId) {
-
-        Task task = taskRepository.findById(taskId)
-                .orElseThrow(() -> new NotFoundException("Task not found"));
-
-        if (task.getExecutor() != null) {
-            throw new IllegalStateException("Task already has executor");
-        }
-
-        User user = userService.findById(executorId);
-        task.setExecutor(user);
-
-        return taskRepository.save(task);
     }
 }

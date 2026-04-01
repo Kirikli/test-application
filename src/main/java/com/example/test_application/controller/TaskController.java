@@ -20,8 +20,8 @@ public class TaskController {
 
     @GetMapping
     public PageResponseDTO<TaskDTO> getTasksPage(
-            @RequestParam(required = false, defaultValue = "0") int page,
-            @RequestParam(required = false, defaultValue = "100") int size) {
+            @RequestParam(required = false, defaultValue = "1") int page,
+            @RequestParam(required = false, defaultValue = "50") int size) {
         return taskService.getTaskPage(page, size);
     }
 
@@ -32,7 +32,7 @@ public class TaskController {
 
     @PostMapping
     public TaskDTO createTask(@RequestBody CreateTaskDTO createTaskDTO) {
-        return taskService.createTaskSendKafka(createTaskDTO);
+        return taskService.createTask(createTaskDTO);
     }
 
     @PatchMapping("/{id}/assign")
@@ -40,7 +40,7 @@ public class TaskController {
             @PathVariable UUID id,
             @RequestBody AssignTaskDTO assignDTO
     ) {
-        return taskService.assignExecutorSendKafka(id, assignDTO.getExecutorId());
+        return taskService.assignExecutor(id, assignDTO.getExecutorId());
     }
 
     @PatchMapping("/{id}/status")
