@@ -9,7 +9,7 @@ cd test-application
 ```
 3) Build and Start the project
 ```bash
-docker-compose up -d
+docker-compose up --build
 ```
 
 ## Now ##
