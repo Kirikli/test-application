@@ -1,5 +1,6 @@
 package com.example.test_application.model;
 
+import asyncapi.enums.TaskStatus;
 import jakarta.persistence.*;
 import lombok.Data;
 

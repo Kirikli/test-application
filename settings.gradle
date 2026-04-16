@@ -2,3 +2,4 @@ rootProject.name = 'test-application'
 
 include 'app-service'
 include 'auth-service'
+include 'async-api'

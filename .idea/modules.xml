@@ -6,6 +6,9 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app-service/test-application.app-service.iml" filepath="$PROJECT_DIR$/.idea/modules/app-service/test-application.app-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app-service/test-application.app-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app-service/test-application.app-service.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app-service/test-application.app-service.test.iml" filepath="$PROJECT_DIR$/.idea/modules/app-service/test-application.app-service.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/common/test-application.async-api.iml" filepath="$PROJECT_DIR$/.idea/modules/common/test-application.async-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/async-api/test-application.async-api.main.iml" filepath="$PROJECT_DIR$/.idea/modules/async-api/test-application.async-api.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/async-api/test-application.async-api.test.iml" filepath="$PROJECT_DIR$/.idea/modules/async-api/test-application.async-api.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/auth-service/test-application.auth-service.iml" filepath="$PROJECT_DIR$/.idea/modules/auth-service/test-application.auth-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/auth-service/test-application.auth-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/auth-service/test-application.auth-service.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/auth-service/test-application.auth-service.test.iml" filepath="$PROJECT_DIR$/.idea/modules/auth-service/test-application.auth-service.test.iml" />

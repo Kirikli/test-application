@@ -1,0 +1,6 @@
+kafka:
+  topics:
+    assign-executor: assign-executor-event-topic
+    create-task: task-created-event-topic
+    user-stream: user-stream-topic
+    user_flow: user-flow-topic

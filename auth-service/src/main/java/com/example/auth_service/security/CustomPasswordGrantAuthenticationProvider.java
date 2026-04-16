@@ -33,6 +33,11 @@ public class CustomPasswordGrantAuthenticationProvider implements Authentication
     private final PasswordEncoder passwordEncoder;
     private OAuth2TokenGenerator<?> tokenGenerator;
 
+    @Autowired
+    public void setTokenGenerator(OAuth2TokenGenerator<?> tokenGenerator) {
+        this.tokenGenerator = tokenGenerator;
+    }
+
     @Override
     public Authentication authenticate(Authentication authentication) throws AuthenticationException {
         CustomPasswordGrantAuthenticationToken customAuthentication =

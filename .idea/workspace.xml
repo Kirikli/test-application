@@ -5,50 +5,79 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eb4ab6bd-753a-4f94-86e8-89067bbc7512" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/example/auth_service/controller/GlobalExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/example/auth_service/controller/LoginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/example/auth_service/dto/LoginDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/example/auth_service/dto/RegistryDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/example/auth_service/dto/UserDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/example/auth_service/exception/ErrorResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/example/auth_service/exception/InvalidCredentialsException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/example/auth_service/exception/UserAlreadyExistsException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/example/auth_service/mapper/UserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/example/auth_service/model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/example/auth_service/repository/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/example/auth_service/security/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/example/auth_service/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/app-service/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/app-service/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/app-service/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app-service/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_nimbusds_nimbus_jose_jwt_10_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_boot_spring_boot_security_oauth2_authorization_server_4_0_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_boot_spring_boot_starter_security_oauth2_authorization_server_4_0_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_security_spring_security_oauth2_authorization_server_7_0_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_security_spring_security_oauth2_core_7_0_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_security_spring_security_oauth2_jose_7_0_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_security_spring_security_oauth2_resource_server_7_0_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/async-api/test-application.async-api.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/async-api/test-application.async-api.test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/common/test-application.async-api.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app-service/src/main/java/com/example/test_application/dto/event/TaskAssignDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app-service/src/main/java/com/example/test_application/dto/event/TaskCreateDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app-service/src/main/java/com/example/test_application/kafka/KafkaConfigConsumer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app-service/src/main/java/com/example/test_application/kafka/KafkaEventHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app-service/src/main/java/com/example/test_application/kafka/KafkaTopicsProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app-service/src/main/java/com/example/test_application/services/KafkaProducerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/async-api/src/main/java/asyncapi/event/AssignExecutorEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/async-api/src/main/java/asyncapi/event/KafkaEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/async-api/src/main/java/asyncapi/event/TaskCreateEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/async-api/src/main/java/asyncapi/event/UserFlowEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/async-api/src/main/java/asyncapi/event/UserStreamEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/async-api/src/main/resources/application.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/example/auth_service/dto/event/UserRegisteredEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/example/auth_service/kafka/KafkaConfigProducer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/example/auth_service/kafka/KafkaTopicsProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/example/auth_service/service/KafkaProducerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/9.4.1/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.4.1/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/9.4.1/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.4.1/checksums/md5-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/9.4.1/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.4.1/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/9.4.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.4.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/9.4.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.4.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/9.4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.4.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/9.4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.4.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/9.4.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.4.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_kafka_spring_kafka_4_0_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_kafka_spring_kafka_4_0_4.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_context_7_0_6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_spring_context_7_0_6.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/app-service/test-application.app-service.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app-service/test-application.app-service.main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/app-service/test-application.app-service.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app-service/test-application.app-service.test.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/auth-service/test-application.auth-service.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/auth-service/test-application.auth-service.main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/auth-service/test-application.auth-service.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/auth-service/test-application.auth-service.test.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app-service/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app-service/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app-service/src/main/java/com/example/test_application/TestApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/app-service/src/main/java/com/example/test_application/TestApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app-service/src/main/java/com/example/test_application/dto/CreateRecordDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app-service/src/main/java/com/example/test_application/dto/TaskDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/app-service/src/main/java/com/example/test_application/dto/TaskDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app-service/src/main/java/com/example/test_application/dto/UpdateTaskStatusDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/app-service/src/main/java/com/example/test_application/dto/UpdateTaskStatusDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app-service/src/main/java/com/example/test_application/kafka/KafkaConfigProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/app-service/src/main/java/com/example/test_application/kafka/KafkaConfigProducer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app-service/src/main/java/com/example/test_application/kafka/event/AssignExecutorEvent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app-service/src/main/java/com/example/test_application/kafka/event/KafkaEvent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app-service/src/main/java/com/example/test_application/kafka/event/TaskCreateEvent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app-service/src/main/java/com/example/test_application/mappers/TaskMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/app-service/src/main/java/com/example/test_application/mappers/TaskMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app-service/src/main/java/com/example/test_application/model/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/app-service/src/main/java/com/example/test_application/model/Task.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app-service/src/main/java/com/example/test_application/model/TaskStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/async-api/src/main/java/asyncapi/enums/TaskStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app-service/src/main/java/com/example/test_application/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/app-service/src/main/java/com/example/test_application/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app-service/src/main/java/com/example/test_application/services/TaskService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app-service/src/main/java/com/example/test_application/services/TaskService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app-service/src/main/java/com/example/test_application/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app-service/src/main/java/com/example/test_application/services/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/app-service/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app-service/src/main/resources/data.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/example/auth_service/AuthServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/example/auth_service/AuthServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/example/auth_service/dto/RegistryDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/example/auth_service/dto/RegistryDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/example/auth_service/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/example/auth_service/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/example/auth_service/security/CustomPasswordGrantAuthenticationProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/example/auth_service/security/CustomPasswordGrantAuthenticationProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/example/auth_service/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/example/auth_service/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/problems/problems-report.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/problems/problems-report.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/test_application/TestApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/app-service/src/main/java/com/example/test_application/TestApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/test_application/common/PageResponseBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/app-service/src/main/java/com/example/test_application/common/PageResponseBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/test_application/common/PageResponseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/app-service/src/main/java/com/example/test_application/common/PageResponseDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/test_application/controller/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/app-service/src/main/java/com/example/test_application/controller/GlobalExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/test_application/controller/TaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/app-service/src/main/java/com/example/test_application/controller/TaskController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/test_application/dto/AssignTaskDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/app-service/src/main/java/com/example/test_application/dto/AssignTaskDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/test_application/dto/CreateTaskDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/app-service/src/main/java/com/example/test_application/dto/CreateTaskDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/test_application/dto/TaskDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/app-service/src/main/java/com/example/test_application/dto/TaskDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/test_application/dto/UpdateTaskStatusDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/app-service/src/main/java/com/example/test_application/dto/UpdateTaskStatusDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/test_application/exception/NotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/app-service/src/main/java/com/example/test_application/exception/NotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/test_application/kafka/KafkaConfigProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/app-service/src/main/java/com/example/test_application/kafka/KafkaConfigProducer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/test_application/kafka/event/AssignExecutorEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/app-service/src/main/java/com/example/test_application/kafka/event/AssignExecutorEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/test_application/kafka/event/KafkaEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/app-service/src/main/java/com/example/test_application/kafka/event/KafkaEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/test_application/kafka/event/TaskCreateEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/app-service/src/main/java/com/example/test_application/kafka/event/TaskCreateEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/test_application/mappers/TaskMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/app-service/src/main/java/com/example/test_application/mappers/TaskMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/test_application/model/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/app-service/src/main/java/com/example/test_application/model/Task.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/test_application/model/TaskStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/app-service/src/main/java/com/example/test_application/model/TaskStatus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/test_application/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/app-service/src/main/java/com/example/test_application/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/test_application/repositories/TaskRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/app-service/src/main/java/com/example/test_application/repositories/TaskRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/test_application/repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/app-service/src/main/java/com/example/test_application/repositories/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/test_application/services/TaskService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app-service/src/main/java/com/example/test_application/services/TaskService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/test_application/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app-service/src/main/java/com/example/test_application/services/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/app-service/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/app-service/src/main/resources/data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/test_application/TestApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/app-service/src/test/java/com/example/test_application/TestApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,39 +141,51 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Docker.docker-compose.yaml.app: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.docker-compose.yaml.kafka: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.docker-compose.yaml.postgres: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.docker-compose.yaml: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Download Sources.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.test-application [:com.example.test_application.TestApplication.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.test-application [dependencies].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.test-application:app-service [:app-service:com.example.test_application.TestApplication.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.test-application:auth-service [:auth-service:com.example.auth_service.AuthServiceApplication.main()].executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Kirill/Downloads/test-application&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Docker.docker-compose.yaml.app: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yaml.kafka: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yaml.postgres-auth: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yaml.postgres-task: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yaml.postgres: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yaml: Compose Deployment.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "Gradle.Download Sources.executor": "Run",
+    "Gradle.test-application [:com.example.test_application.TestApplication.main()].executor": "Run",
+    "Gradle.test-application [dependencies].executor": "Run",
+    "Gradle.test-application:app-service [:app-service:com.example.test_application.TestApplication.main()].executor": "Run",
+    "Gradle.test-application:auth-service [:auth-service:com.example.auth_service.AuthServiceApplication.main()].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Kirill/Downloads/test-application/async-api/src/main",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Kirill\Downloads\test-application\async-api\src\main" />
+      <recent name="C:\Users\Kirill\Downloads\test-application\common\src\main\java\event" />
+      <recent name="C:\Users\Kirill\Downloads\test-application\auth-service\src\main\java\com\example\auth_service" />
       <recent name="C:\Users\Kirill\Downloads\test-application\src\main\java\com\example\test_application" />
       <recent name="C:\Users\Kirill\Downloads\test-application\src\main\resources" />
-      <recent name="C:\Users\Kirill\Downloads\test-application" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Kirill\Downloads\test-application" />
       <recent name="C:\Users\Kirill\Downloads\test-application\app-service" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="enums" />
     </key>
   </component>
   <component name="RunManager" selected="Application.AuthServiceApplication">
@@ -174,28 +215,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="test-application [dependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="dependencies" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
-      <method v="2" />
-    </configuration>
     <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
       <deployment type="docker-compose.yml">
         <settings />
@@ -215,12 +234,25 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="docker-compose.yaml.postgres: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+    <configuration name="docker-compose.yaml.postgres-auth: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
           <option name="services">
             <list>
-              <option value="postgres" />
+              <option value="postgres-auth" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yaml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yaml.postgres-task: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="postgres-task" />
             </list>
           </option>
           <option name="sourceFilePath" value="docker-compose.yaml" />
@@ -230,11 +262,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TestApplication" />
         <item itemvalue="Docker.docker-compose.yaml.kafka: Compose Deployment" />
+        <item itemvalue="Application.TestApplication" />
         <item itemvalue="Application.AuthServiceApplication" />
-        <item itemvalue="Docker.docker-compose.yaml.postgres: Compose Deployment" />
-        <item itemvalue="Gradle.test-application [dependencies]" />
+        <item itemvalue="Docker.docker-compose.yaml.postgres-auth: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yaml.postgres-task: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
@@ -247,5 +279,16 @@
       <updated>1774970775329</updated>
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/auth-service/src/main/java/com/example/auth_service/service/UserService.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -1,6 +1,6 @@
 package com.example.test_application.kafka;
 
-import com.example.test_application.kafka.event.KafkaEvent;
+import asyncapi.event.KafkaEvent;
 import lombok.RequiredArgsConstructor;
 import org.apache.kafka.clients.admin.NewTopic;
 import org.apache.kafka.clients.producer.ProducerConfig;
@@ -22,6 +22,7 @@ import java.util.Map;
 public class KafkaConfigProducer {
 
     private final Environment environment;
+    private final KafkaTopicsProperties topics;
 
     Map<String, Object> producerConfigs() {
         Map<String, Object> config = new HashMap<>();
@@ -59,7 +60,7 @@ public class KafkaConfigProducer {
 
     @Bean
     NewTopic createTaskTopic() {
-        return TopicBuilder.name("task-created-event-topic")
+        return TopicBuilder.name(topics.createTask())
                 .partitions(3)
                 .replicas(1)
                 .build();
@@ -67,7 +68,7 @@ public class KafkaConfigProducer {
 
     @Bean
     NewTopic assignExecutorTopic() {
-        return TopicBuilder.name("assign-executor-event-topic")
+        return TopicBuilder.name(topics.assignExecutor())
                 .partitions(3)
                 .replicas(1)
                 .build();

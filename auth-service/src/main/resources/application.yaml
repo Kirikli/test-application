@@ -3,7 +3,7 @@ spring:
     name: auth-service
 
   datasource:
-    url: jdbc:postgresql://localhost:5432/test
+    url: jdbc:postgresql://localhost:5433/test
     username: user
     password: password
 
@@ -12,6 +12,20 @@ spring:
       ddl-auto: update
     show-sql: true
     defer-datasource-initialization: true
+
+  kafka:
+    topics:
+      user-stream: user-stream-topic
+      user-flow: user-flow-topic
+    bootstrap-servers: localhost:9092
+    producer:
+      acks: all
+      properties:
+        delivery.timeout.ms: 20000
+        linger.ms: 0
+        request.timeout.ms: 10000
+        enable.idempotence: true
+        max.in.flight.requests.per.connection: 5
 
 server:
   port: 8081

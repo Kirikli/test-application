@@ -1,7 +1,7 @@
 package com.example.test_application.dto;
 
-import com.example.test_application.model.TaskStatus;
 import com.example.test_application.model.User;
+import asyncapi.enums.TaskStatus;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 

@@ -1,9 +1,9 @@
 package com.example.test_application.mappers;
 
+import asyncapi.enums.TaskStatus;
 import com.example.test_application.dto.CreateTaskDTO;
 import com.example.test_application.dto.TaskDTO;
 import com.example.test_application.model.Task;
-import com.example.test_application.model.TaskStatus;
 import org.springframework.stereotype.Component;
 
 @Component

@@ -1,4 +1,4 @@
-package com.example.test_application.model;
+package asyncapi.enums;
 
 public enum TaskStatus {
     NEW,

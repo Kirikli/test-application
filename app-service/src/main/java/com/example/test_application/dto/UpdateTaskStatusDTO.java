@@ -1,6 +1,6 @@
 package com.example.test_application.dto;
 
-import com.example.test_application.model.TaskStatus;
+import asyncapi.enums.TaskStatus;
 import lombok.Data;
 
 @Data
