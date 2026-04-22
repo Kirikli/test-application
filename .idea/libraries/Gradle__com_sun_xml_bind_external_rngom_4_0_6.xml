@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: com.sun.xml.bind.external:rngom:4.0.6" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="com.sun.xml.bind.external" artifactId="rngom" version="4.0.6" baseVersion="4.0.6" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.sun.xml.bind.external/rngom/4.0.6/e284ac6a66c9184bc0beaf0aadfbfa5371e6eb66/rngom-4.0.6.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

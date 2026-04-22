@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: org.apache.james:apache-mime4j-storage:0.8.13" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="org.apache.james" artifactId="apache-mime4j-storage" version="0.8.13" baseVersion="0.8.13" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.james/apache-mime4j-storage/0.8.13/f5f1d0f42d2c0df8cae40f62516466a57131354/apache-mime4j-storage-0.8.13.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -42,6 +42,19 @@ services:
     networks:
       - app-network
 
+  keycloak:
+    image: quay.io/keycloak/keycloak:26.0
+    command: start-dev --import-realm
+    environment:
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: admin
+    ports:
+      - "8082:8080"
+    volumes:
+      - ./keycloak-realm-config.json:/opt/keycloak/data/import/realm-config.json
+    networks:
+      - app-network
+
   app:
     build: ..
     ports:
