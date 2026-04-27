@@ -5,6 +5,8 @@
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jboss/jandex/2.4.5.Final/9b4634d1fa28628549eb986b7c0c73f387090fba/jandex-2.4.5.Final.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jboss/jandex/2.4.5.Final/52921d4acdd4d7c197da07962e0118304e884697/jandex-2.4.5.Final-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>

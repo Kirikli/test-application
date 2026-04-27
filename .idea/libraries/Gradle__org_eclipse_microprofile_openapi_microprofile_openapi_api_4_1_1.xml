@@ -5,6 +5,8 @@
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.microprofile.openapi/microprofile-openapi-api/4.1.1/b5c2ba3a39e2f20f347754325b3136f6703a23fd/microprofile-openapi-api-4.1.1.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.microprofile.openapi/microprofile-openapi-api/4.1.1/4c50278183f95a10dc612a4e641869ddc9d32ab8/microprofile-openapi-api-4.1.1-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>

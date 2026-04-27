@@ -5,6 +5,8 @@
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.nimbusds/nimbus-jose-jwt/10.4/ca983d3f13080567e36ea554a15af38f31a0cb4/nimbus-jose-jwt-10.4.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.nimbusds/nimbus-jose-jwt/10.4/aa5063b12c33ba991a50791aba8e2ef6ee4cd05f/nimbus-jose-jwt-10.4-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>

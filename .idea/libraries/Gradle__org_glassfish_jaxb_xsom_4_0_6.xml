@@ -5,6 +5,8 @@
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/xsom/4.0.6/b250eca67bafd0e947d0da4f00a7856aeb83b247/xsom-4.0.6.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/xsom/4.0.6/18d0061a07b7fc96fd199f098d6450b5369405f4/xsom-4.0.6-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>

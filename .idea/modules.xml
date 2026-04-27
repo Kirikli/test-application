@@ -3,6 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/test-application.iml" filepath="$PROJECT_DIR$/.idea/modules/test-application.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/api-gateway/test-application.api-gateway.iml" filepath="$PROJECT_DIR$/.idea/modules/api-gateway/test-application.api-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/api-gateway/test-application.api-gateway.main.iml" filepath="$PROJECT_DIR$/.idea/modules/api-gateway/test-application.api-gateway.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/api-gateway/test-application.api-gateway.test.iml" filepath="$PROJECT_DIR$/.idea/modules/api-gateway/test-application.api-gateway.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app-service/test-application.app-service.iml" filepath="$PROJECT_DIR$/.idea/modules/app-service/test-application.app-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app-service/test-application.app-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app-service/test-application.app-service.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app-service/test-application.app-service.test.iml" filepath="$PROJECT_DIR$/.idea/modules/app-service/test-application.app-service.test.iml" />

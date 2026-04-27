@@ -5,6 +5,8 @@
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jboss.resteasy/resteasy-client/6.2.15.Final/6cfef7f4e4ac4ed8cc897571322e2fcd9153bf4b/resteasy-client-6.2.15.Final.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jboss.resteasy/resteasy-client/6.2.15.Final/bd13137056444fb95f257505bee2310fee66662/resteasy-client-6.2.15.Final-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>

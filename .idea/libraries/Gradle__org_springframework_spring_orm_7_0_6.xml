@@ -5,6 +5,8 @@
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-orm/7.0.6/719bd92fe383fcc5b084675667da870ff8dabeca/spring-orm-7.0.6.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-orm/7.0.6/76f0bb18247385efcc251d8e87264c1a2e83d86e/spring-orm-7.0.6-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>

@@ -5,6 +5,8 @@
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jboss.resteasy/resteasy-jackson2-provider/6.2.15.Final/b99a33e87bc1e09ac8fc3c174debe2aeb811e3b3/resteasy-jackson2-provider-6.2.15.Final.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jboss.resteasy/resteasy-jackson2-provider/6.2.15.Final/49b4ac3aaa5ee63e0aee0bdf59523afc4f63e99/resteasy-jackson2-provider-6.2.15.Final-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>

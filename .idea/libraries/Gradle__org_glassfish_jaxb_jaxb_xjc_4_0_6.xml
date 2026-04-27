@@ -5,6 +5,8 @@
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-xjc/4.0.6/858aa8a31a5ea2bd287e4753a99ae294040c53f8/jaxb-xjc-4.0.6.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-xjc/4.0.6/fac58336e143b33e4fed3d3dc0e3a1ec04b5277c/jaxb-xjc-4.0.6-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>

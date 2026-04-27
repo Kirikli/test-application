@@ -5,6 +5,8 @@
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jboss.resteasy/resteasy-jaxb-provider/6.2.15.Final/b2e83ab737e5e07d5f0fb6eb0a1f67e29e4f4bea/resteasy-jaxb-provider-6.2.15.Final.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jboss.resteasy/resteasy-jaxb-provider/6.2.15.Final/498b483450cde8beb9ec76fe714fcb83b2b95f41/resteasy-jaxb-provider-6.2.15.Final-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>

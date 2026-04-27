@@ -5,6 +5,8 @@
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/commons-io/commons-io/2.19.0/1f8d4a99ba72b77aa69101175efc79b0c7dcdd7e/commons-io-2.19.0.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/commons-io/commons-io/2.19.0/12ccc61c573aed8a193f9727dc33795eba29d7c5/commons-io-2.19.0-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>

@@ -1,3 +1,6 @@
+server:
+  port: 8080
+
 spring:
   application:
     name: test-application
@@ -31,10 +34,3 @@ spring:
       group-id: task-event
       properties:
         spring.json.trusted.packages: asyncapi.event
-
-  security:
-    oauth2:
-      resourceserver:
-        jwt:
-          jwk-set-uri: http://localhost:8082/realms/auth-realm/protocol/openid-connect/certs
-

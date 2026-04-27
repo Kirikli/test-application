@@ -5,6 +5,8 @@
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.module/jackson-module-jakarta-xmlbind-annotations/2.21.2/b9a345a6e358c02d906735956c7607f58072b963/jackson-module-jakarta-xmlbind-annotations-2.21.2.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.module/jackson-module-jakarta-xmlbind-annotations/2.21.2/58e0d7e16c3a555dcba9f31c8c3cef1b3bcec23b/jackson-module-jakarta-xmlbind-annotations-2.21.2-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>

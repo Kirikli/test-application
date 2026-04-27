@@ -5,6 +5,8 @@
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-validation/4.0.5/e1bda22af7da5e23ff0ba8212577b28c61dccdcc/spring-boot-validation-4.0.5.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-validation/4.0.5/6e6a7a106447643b90400fd7598422b80fc2b9c3/spring-boot-validation-4.0.5-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>

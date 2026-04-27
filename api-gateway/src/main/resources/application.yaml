@@ -1,0 +1,9 @@
+server:
+  port: 8765
+
+spring:
+  application:
+    name: api-gateway
+
+keycloak:
+  userinfo-uri: http://localhost:8082/realms/auth-realm/protocol/openid-connect/userinfo

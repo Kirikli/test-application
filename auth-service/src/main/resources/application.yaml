@@ -1,3 +1,6 @@
+server:
+  port: 8081
+
 spring:
   application:
     name: auth-service
@@ -26,9 +29,6 @@ spring:
         request.timeout.ms: 10000
         enable.idempotence: true
         max.in.flight.requests.per.connection: 5
-
-server:
-  port: 8081
 
 keycloak:
   url: http://localhost:8082

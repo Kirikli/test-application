@@ -5,6 +5,8 @@
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jboss.resteasy/resteasy-core-spi/6.2.15.Final/9a885576f7e79827366a994c5356ee264359bc42/resteasy-core-spi-6.2.15.Final.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jboss.resteasy/resteasy-core-spi/6.2.15.Final/c0239c9266c7bed5d786b38bee71f4ce895e67cc/resteasy-core-spi-6.2.15.Final-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>

@@ -5,6 +5,8 @@
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/codemodel/4.0.6/d1bc0a725256f4dbfc170a950c7053971d59b30e/codemodel-4.0.6.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/codemodel/4.0.6/2769ad028e7887a2f52a224b0e05170b8538d32d/codemodel-4.0.6-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>

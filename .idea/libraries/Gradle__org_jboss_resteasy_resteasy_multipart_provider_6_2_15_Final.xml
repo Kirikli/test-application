@@ -5,6 +5,8 @@
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jboss.resteasy/resteasy-multipart-provider/6.2.15.Final/9687511d06b13f45bd791da7df4ad49ee53a993e/resteasy-multipart-provider-6.2.15.Final.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jboss.resteasy/resteasy-multipart-provider/6.2.15.Final/374f0a1e160002df695087a58c5f29b53f1eb250/resteasy-multipart-provider-6.2.15.Final-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>

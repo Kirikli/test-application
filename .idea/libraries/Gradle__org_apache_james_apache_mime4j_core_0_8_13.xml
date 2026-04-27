@@ -5,6 +5,8 @@
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.james/apache-mime4j-core/0.8.13/ef536e762f426a6943653a90aa59463b43fe45b1/apache-mime4j-core-0.8.13.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.james/apache-mime4j-core/0.8.13/6d62409bce4b866f96a04db42911e5f27d14b3cc/apache-mime4j-core-0.8.13-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>

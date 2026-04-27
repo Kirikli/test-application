@@ -5,6 +5,8 @@
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.keycloak/keycloak-client-common-synced/26.0.9/91ce35725727101b3204cadc54161d6500baa654/keycloak-client-common-synced-26.0.9.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.keycloak/keycloak-client-common-synced/26.0.9/5d7b388f981cb1af4b30f7da87906b37c6b8dec1/keycloak-client-common-synced-26.0.9-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>

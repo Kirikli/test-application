@@ -5,6 +5,8 @@
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.jakarta.rs/jackson-jakarta-rs-base/2.21.2/c5f8a3841337bb1e4b299042db47ee190c50af27/jackson-jakarta-rs-base-2.21.2.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.jakarta.rs/jackson-jakarta-rs-base/2.21.2/dcbd1508639411c9740badaba71f104f8f615255/jackson-jakarta-rs-base-2.21.2-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>

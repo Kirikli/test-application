@@ -5,6 +5,8 @@
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.sun.istack/istack-commons-tools/4.1.2/585c1af261fbc0b0cccf72f4d6c5ff11c1e596b1/istack-commons-tools-4.1.2.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.sun.istack/istack-commons-tools/4.1.2/58cda45c4a56d29a5221e56aad8062cda3d59598/istack-commons-tools-4.1.2-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>

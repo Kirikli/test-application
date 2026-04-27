@@ -5,6 +5,8 @@
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/jakarta.ws.rs/jakarta.ws.rs-api/4.0.0/c27a67f84ca491efcb3fa68f4df926e8a110069e/jakarta.ws.rs-api-4.0.0.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/jakarta.ws.rs/jakarta.ws.rs-api/4.0.0/8e6ca677ca06834a5822cddcb088dff917792f8a/jakarta.ws.rs-api-4.0.0-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>

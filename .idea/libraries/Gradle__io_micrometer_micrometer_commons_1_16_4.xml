@@ -5,6 +5,8 @@
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.micrometer/micrometer-commons/1.16.4/b6a0e350a714f4cd973d760e68104c9602b4564c/micrometer-commons-1.16.4.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.micrometer/micrometer-commons/1.16.4/153a6ca0a3b01cc209fcb6e7c2f0cfa04e4bf7da/micrometer-commons-1.16.4-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>

@@ -5,6 +5,8 @@
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.security/spring-security-oauth2-core/7.0.4/231f21d1efb91926a83e092845d098ee5c9bf87/spring-security-oauth2-core-7.0.4.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.security/spring-security-oauth2-core/7.0.4/d62a6cca0a6dfffb56f6602499cfec27c7c988d0/spring-security-oauth2-core-7.0.4-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>

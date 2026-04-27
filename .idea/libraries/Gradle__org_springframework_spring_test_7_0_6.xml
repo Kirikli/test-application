@@ -5,6 +5,8 @@
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-test/7.0.6/fd012839666ea5696d9efda89717d5f3f134fefe/spring-test-7.0.6.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-test/7.0.6/c839a74d5e9e177f78c20bdb93e6467a0cfaa247/spring-test-7.0.6-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>

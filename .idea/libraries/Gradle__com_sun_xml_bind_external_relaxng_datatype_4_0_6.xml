@@ -5,6 +5,8 @@
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.sun.xml.bind.external/relaxng-datatype/4.0.6/b025edfde3e9dd0a94e37dc964d39bd599e9ef98/relaxng-datatype-4.0.6.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.sun.xml.bind.external/relaxng-datatype/4.0.6/7652d8da067ace8b690a5e462ff170863bc7f44d/relaxng-datatype-4.0.6-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>

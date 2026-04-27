@@ -5,6 +5,8 @@
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/tools.jackson.core/jackson-core/3.1.0/df0dc5d0bf720739ae7b6afeee2af2aabf88905b/jackson-core-3.1.0.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/tools.jackson.core/jackson-core/3.1.0/9559e7b79833252033adface43f4c7dcd5ff1c12/jackson-core-3.1.0-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>

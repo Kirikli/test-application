@@ -5,6 +5,8 @@
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-webmvc/4.0.5/33bed4ae1c0fef88d4ebdb82916fbb19b884a034/spring-boot-webmvc-4.0.5.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-webmvc/4.0.5/d9f4712480f48200b33278decae5752bc01938e/spring-boot-webmvc-4.0.5-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>

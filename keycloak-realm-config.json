@@ -31,7 +31,8 @@
       "publicClient": false,
       "secret": "secret",
       "directAccessGrantsEnabled": true,
-      "standardFlowEnabled": true
+      "standardFlowEnabled": true,
+      "defaultClientScopes": ["openid", "profile", "email"]
     }
   ]
 }

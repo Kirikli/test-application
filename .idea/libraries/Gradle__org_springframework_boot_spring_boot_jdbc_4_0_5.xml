@@ -5,6 +5,8 @@
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-jdbc/4.0.5/91b50419766f999c4a7c155d74955a67ad00237d/spring-boot-jdbc-4.0.5.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-jdbc/4.0.5/af05f15b87985481cb3e596377b577b42f4b070f/spring-boot-jdbc-4.0.5-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>
