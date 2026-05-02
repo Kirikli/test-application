@@ -1,6 +1,6 @@
 package com.example.test_application.controller;
 
-import com.example.test_application.exception.NotFoundException;
+import asyncapi.exception.NotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;

@@ -16,6 +16,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.Instant;
+import java.util.UUID;
 
 @Slf4j
 @Service
@@ -33,15 +34,15 @@ public class UserService {
         if (userRepository.existsByEmail(dto.email())) {
             throw new UserAlreadyExistsException(dto.email());
         }
+        UUID userId = keycloakService.createUser(dto.email(), dto.password(), dto.name());
         User user = new User();
+        user.setId(userId);
         user.setEmail(dto.email());
         user.setPassword(passwordEncoder.encode(dto.password()));
         user.setBirthday(dto.birthday());
         user.setName(dto.name());
-        user.setCreatedAt(Instant.now());   
+        user.setCreatedAt(Instant.now());
         user = userRepository.save(user);
-
-        keycloakService.createUser(dto.email(), dto.password(), dto.name());
 
         eventPublisher.publishEvent(
                 new UserRegisteredEvent(

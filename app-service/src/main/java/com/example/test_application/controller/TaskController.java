@@ -1,7 +1,6 @@
 package com.example.test_application.controller;
 
-import com.example.test_application.common.PageResponseDTO;
-import com.example.test_application.dto.AssignTaskDTO;
+import asyncapi.util.PageResponseDTO;
 import com.example.test_application.dto.CreateTaskDTO;
 import com.example.test_application.dto.TaskDTO;
 import com.example.test_application.dto.UpdateTaskStatusDTO;
@@ -38,9 +37,9 @@ public class TaskController {
     @PatchMapping("/{id}/assign")
     public TaskDTO assignExecutor(
             @PathVariable UUID id,
-            @RequestBody AssignTaskDTO assignDTO
+            @RequestHeader("user-id") UUID userId
     ) {
-        return taskService.assignExecutor(id, assignDTO.getExecutorId());
+        return taskService.assignExecutor(id, userId);
     }
 
     @PatchMapping("/{id}/status")

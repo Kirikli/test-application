@@ -19,8 +19,8 @@ public class KafkaEventHandler {
     private final UserService userService;
 
     @KafkaHandler
-    public void handleCreateTask(UserStreamEvent userStreamEvent) {
-        log.info("Received event task create: {}", userStreamEvent);
+    public void handleCreateUser(UserStreamEvent userStreamEvent) {
+        log.info("Received event user create: {}", userStreamEvent);
         userService.createUser(userStreamEvent);
     }
 }

@@ -1,6 +1,6 @@
 package com.example.test_application.services;
 
-import com.example.test_application.exception.NotFoundException;
+import asyncapi.exception.NotFoundException;
 import com.example.test_application.model.User;
 import com.example.test_application.repositories.UserRepository;
 import asyncapi.event.UserStreamEvent;

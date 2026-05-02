@@ -6,6 +6,8 @@ import com.example.test_application.dto.TaskDTO;
 import com.example.test_application.model.Task;
 import org.springframework.stereotype.Component;
 
+import java.math.BigDecimal;
+
 @Component
 public class TaskMapper {
 
@@ -14,6 +16,7 @@ public class TaskMapper {
         task.setDescription(createTaskDTO.getDescription());
         task.setName(createTaskDTO.getName());
         task.setStatus(TaskStatus.NEW);
+        task.setAmount(createTaskDTO.getAmount() != null ? createTaskDTO.getAmount() : BigDecimal.ZERO);
         return task;
     }
 
@@ -23,7 +26,8 @@ public class TaskMapper {
                 task.getExecutor(),
                 task.getDescription(),
                 task.getName(),
-                task.getStatus()
+                task.getStatus(),
+                task.getAmount()
         );
     }
 }

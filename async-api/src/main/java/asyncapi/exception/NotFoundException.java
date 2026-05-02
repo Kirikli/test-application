@@ -1,4 +1,4 @@
-package com.example.test_application.exception;
+package asyncapi.exception;
 
 public class NotFoundException extends RuntimeException {
     public NotFoundException(String message) {

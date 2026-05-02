@@ -1,6 +1,8 @@
 package com.example.test_application.services;
 
+import asyncapi.event.TaskCompleteEvent;
 import asyncapi.event.KafkaEvent;
+import com.example.test_application.dto.event.TaskCompleteDTO;
 import com.example.test_application.dto.event.TaskAssignDTO;
 import com.example.test_application.dto.event.TaskCreateDTO;
 import asyncapi.event.AssignExecutorEvent;
@@ -11,6 +13,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.event.EventListener;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Component;
+
+import java.time.Instant;
 
 @RequiredArgsConstructor
 @Component
@@ -53,6 +57,25 @@ public class KafkaProducerService {
                         log.error("Failed to send assign execute event", ex);
                     } else {
                         log.info("Sent assign execute event successfully: {}", event);
+                    }
+                });
+    }
+
+    @EventListener
+    public void handleCompleteTask(TaskCompleteDTO taskCompleteDTO) {
+        TaskCompleteEvent event = new TaskCompleteEvent(
+                taskCompleteDTO.taskId(),
+                taskCompleteDTO.executorId(),
+                taskCompleteDTO.date(),
+                taskCompleteDTO.amount()
+        );
+
+        kafkaTemplate.send(topics.taskComplete(), String.valueOf(event.taskId()), event)
+                .whenComplete((metadata, ex) -> {
+                    if (ex != null) {
+                        log.error("Failed to send assign complete task event", ex);
+                    } else {
+                        log.info("Sent complete task successfully: {}", event);
                     }
                 });
     }

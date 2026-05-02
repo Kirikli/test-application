@@ -4,6 +4,7 @@ import asyncapi.enums.TaskStatus;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.math.BigDecimal;
 import java.util.UUID;
 
 @Data
@@ -29,4 +30,7 @@ public class Task {
     @Enumerated(EnumType.STRING)
     @Column(name = "status")
     private TaskStatus status;
+
+    @Column(name = "amount")
+    private BigDecimal amount;
 }

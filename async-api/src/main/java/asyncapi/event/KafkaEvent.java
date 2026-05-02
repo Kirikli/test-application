@@ -11,6 +11,15 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo;
         @JsonSubTypes.Type(value = UserStreamEvent.class, name = "UserStreamEvent"),
         @JsonSubTypes.Type(value = UserFlowEvent.class, name = "UserFlowEvent"),
         @JsonSubTypes.Type(value = TaskCreateEvent.class, name = "TaskCreateEvent"),
-        @JsonSubTypes.Type(value = AssignExecutorEvent.class, name = "AssignExecutorEvent")})
-public sealed interface KafkaEvent permits AssignExecutorEvent, TaskCreateEvent, UserFlowEvent, UserStreamEvent {
+        @JsonSubTypes.Type(value = AssignExecutorEvent.class, name = "AssignExecutorEvent"),
+        @JsonSubTypes.Type(value = PaymentFlowEvent.class, name = "PaymentFlowEvent"),
+        @JsonSubTypes.Type(value = TaskCompleteEvent.class, name = "CompleteTaskEvent")
+})
+public sealed interface KafkaEvent permits
+        AssignExecutorEvent,
+        TaskCreateEvent,
+        UserFlowEvent,
+        UserStreamEvent,
+        PaymentFlowEvent,
+        TaskCompleteEvent {
 }

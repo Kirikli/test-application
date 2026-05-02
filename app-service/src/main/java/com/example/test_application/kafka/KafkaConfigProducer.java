@@ -73,4 +73,12 @@ public class KafkaConfigProducer {
                 .replicas(1)
                 .build();
     }
+
+    @Bean
+    NewTopic completeTaskTopic() {
+        return TopicBuilder.name(topics.taskComplete())
+                .partitions(3)
+                .replicas(1)
+                .build();
+    }
 }

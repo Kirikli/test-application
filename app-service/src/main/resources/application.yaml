@@ -20,6 +20,7 @@ spring:
     topics:
       assign-executor: assign-executor-event-topic
       create-task: task-created-event-topic
+      task-complete: task-complete-event-topic
     bootstrap-servers: localhost:9092
     producer:
       acks: all

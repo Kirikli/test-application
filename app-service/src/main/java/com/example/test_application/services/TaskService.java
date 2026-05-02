@@ -2,18 +2,20 @@ package com.example.test_application.services;
 
 import asyncapi.enums.TaskStatus;
 import asyncapi.event.TaskCreateEvent;
-import com.example.test_application.common.PageResponseBuilder;
-import com.example.test_application.common.PageResponseDTO;
+import asyncapi.util.PageResponseBuilder;
+import asyncapi.util.PageResponseDTO;
 import com.example.test_application.dto.CreateTaskDTO;
 import com.example.test_application.dto.TaskDTO;
 import com.example.test_application.dto.UpdateTaskStatusDTO;
 import com.example.test_application.dto.event.TaskAssignDTO;
-import com.example.test_application.exception.NotFoundException;
+import com.example.test_application.dto.event.TaskCompleteDTO;
+import asyncapi.exception.NotFoundException;
 import com.example.test_application.mappers.TaskMapper;
 import com.example.test_application.model.Task;
 import com.example.test_application.model.User;
 import com.example.test_application.repositories.TaskRepository;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -21,8 +23,10 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.time.Instant;
 import java.util.UUID;
 
+@Slf4j
 @Service
 @RequiredArgsConstructor
 public class TaskService {
@@ -45,7 +49,13 @@ public class TaskService {
     public PageResponseDTO<TaskDTO> getTaskPage(int page, int size) {
         Pageable pageable = PageRequest.of(Math.max(page - 1, 0), size);
         Page<Task> tasks = taskRepository.findAll(pageable);
-        return PageResponseBuilder.of(tasks, taskMapper::toDto);
+
+        return PageResponseBuilder.of(
+                tasks.getContent(),
+                tasks.getTotalElements(),
+                tasks.getTotalPages(),
+                taskMapper::toDto
+        );
     }
 
     @Transactional
@@ -82,6 +92,10 @@ public class TaskService {
         }
 
         task.setStatus(newStatus);
+        task = taskRepository.save(task);
+        if (newStatus == TaskStatus.DONE) {
+            sendCompleteTask(task);
+        }
 
         return taskMapper.toDto(taskRepository.save(task));
     }
@@ -97,6 +111,7 @@ public class TaskService {
         }
 
         User user = userService.findById(executorId);
+        task.setStatus(TaskStatus.IN_PROGRESS);
         task.setExecutor(user);
         task = taskRepository.save(task);
 
@@ -109,5 +124,17 @@ public class TaskService {
         );
 
         return taskMapper.toDto(task);
+    }
+
+    private void sendCompleteTask(Task task) {
+        task = taskRepository.findTaskWithUser(task.getId());
+        eventPublisher.publishEvent(
+                new TaskCompleteDTO(
+                        task.getId(),
+                        task.getExecutor().getId(),
+                        task.getAmount(),
+                        Instant.now()
+                )
+        );
     }
 }

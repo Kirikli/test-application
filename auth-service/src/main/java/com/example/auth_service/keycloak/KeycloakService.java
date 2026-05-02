@@ -10,6 +10,7 @@ import org.keycloak.representations.idm.UserRepresentation;
 import org.springframework.stereotype.Service;
 
 import java.util.Collections;
+import java.util.UUID;
 
 @Slf4j
 @Service
@@ -19,7 +20,7 @@ public class KeycloakService {
     private final Keycloak keycloak;
     private final KeycloakProperties properties;
 
-    public void createUser(String email, String password, String name) {
+    public UUID createUser(String email, String password, String name) {
         UserRepresentation user = new UserRepresentation();
         user.setUsername(email);
         user.setEmail(email);
@@ -46,6 +47,7 @@ public class KeycloakService {
         credential.setTemporary(false);
 
         userResource.resetPassword(credential);
+        return UUID.fromString(userId);
     }
 }
 

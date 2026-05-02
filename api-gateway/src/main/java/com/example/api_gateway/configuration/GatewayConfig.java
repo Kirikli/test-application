@@ -29,6 +29,13 @@ public class GatewayConfig {
                                 .filter(headerAddFilter))
                         .uri("http://localhost:8080")
                 )
+                .route("accounting-service", r -> r
+                        .path("/api/accounting/**")
+                        .filters(f -> f
+                                .filter(tokenValidationFilter)
+                                .filter(headerAddFilter))
+                        .uri("http://localhost:8084")
+                )
                 .build();
     }
 }

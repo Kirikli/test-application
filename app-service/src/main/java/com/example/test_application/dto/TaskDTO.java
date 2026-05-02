@@ -5,6 +5,7 @@ import asyncapi.enums.TaskStatus;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
+import java.math.BigDecimal;
 import java.util.UUID;
 
 @Data
@@ -15,4 +16,5 @@ public class TaskDTO {
     private String description;
     private String name;
     private TaskStatus status;
+    private BigDecimal amount;
 }
