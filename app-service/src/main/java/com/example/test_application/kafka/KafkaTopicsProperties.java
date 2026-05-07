@@ -4,7 +4,5 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 
 @ConfigurationProperties(prefix = "spring.kafka.topics")
 public record KafkaTopicsProperties(
-        String assignExecutor,
-        String createTask,
-        String taskComplete) {
+        String task) {
 }

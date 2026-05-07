@@ -60,23 +60,7 @@ public class KafkaConfigProducer {
 
     @Bean
     NewTopic createTaskTopic() {
-        return TopicBuilder.name(topics.createTask())
-                .partitions(3)
-                .replicas(1)
-                .build();
-    }
-
-    @Bean
-    NewTopic assignExecutorTopic() {
-        return TopicBuilder.name(topics.assignExecutor())
-                .partitions(3)
-                .replicas(1)
-                .build();
-    }
-
-    @Bean
-    NewTopic completeTaskTopic() {
-        return TopicBuilder.name(topics.taskComplete())
+        return TopicBuilder.name(topics.task())
                 .partitions(3)
                 .replicas(1)
                 .build();

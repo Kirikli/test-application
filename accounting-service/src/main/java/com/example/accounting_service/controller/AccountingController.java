@@ -6,6 +6,9 @@ import com.example.accounting_service.dto.UserBalanceDTO;
 import com.example.accounting_service.service.PaymentRecordService;
 import com.example.accounting_service.service.UserBalanceService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.UUID;
@@ -26,8 +29,7 @@ public class AccountingController {
     @GetMapping("/payments")
     public PageResponseDTO<PaymentRecordDTO> getPayments(
             @RequestHeader("user-id") UUID userId,
-            @RequestParam(required = false, defaultValue = "1") int page,
-            @RequestParam(required = false, defaultValue = "50") int size) {
-        return paymentRecordService.getUserPayments(userId, page, size);
+            @PageableDefault(size = 50, sort = "date", direction = Sort.Direction.DESC) Pageable pageable) {
+        return paymentRecordService.getUserPayments(userId, pageable);
     }
 }

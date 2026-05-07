@@ -18,16 +18,16 @@ public class KafkaEventHandler {
     private final UserBalanceService userBalanceService;
 
     @KafkaListener(
-            topics = "task-complete-event-topic",
-            groupId = "accounting-event")
+            topics = "${spring.kafka.topics.task}",
+            groupId = "${spring.kafka.consumer.group-id}")
     public void handleCompleteTask(TaskCompleteEvent completeEvent) {
         log.info("Received event payment create: {}", completeEvent);
         paymentRecordService.create(completeEvent);
     }
 
     @KafkaListener(
-            topics = "user-stream-topic",
-            groupId = "accounting-event")
+            topics = "${spring.kafka.topics.user-stream}",
+            groupId = "${spring.kafka.consumer.group-id}")
     public void handleCreateUserBalance(UserStreamEvent userStreamEvent) {
         log.info("Received event user balance create: {}", userStreamEvent);
         userBalanceService.createUserBalance(userStreamEvent.id());

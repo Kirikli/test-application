@@ -11,6 +11,7 @@ import asyncapi.exception.NotFoundException;
 
 import java.math.BigDecimal;
 import java.time.Instant;
+import java.util.Map;
 import java.util.UUID;
 
 @Service
@@ -22,19 +23,7 @@ public class UserBalanceService {
 
     @Transactional
     public void createUserBalance(UUID userId) {
-        UserBalance userBalance = new UserBalance();
-        userBalance.setUserId(userId);
-        userBalance.setBalance(new BigDecimal(0));
-        userBalanceRepository.save(userBalance);
-    }
-
-    @Transactional
-    public void updateAmount(UUID userId, BigDecimal payment) {
-        UserBalance userBalance = userBalanceRepository.findById(userId)
-                .orElseThrow(() -> new NotFoundException("User not found"));
-        userBalance.setBalance(userBalance.getBalance().add(payment));
-        userBalance.setUpdatedAt(Instant.now());
-        userBalanceRepository.save(userBalance);
+        userBalanceRepository.insertIfNotExists(userId, Instant.now());
     }
 
     @Transactional(readOnly = true)
@@ -42,5 +31,13 @@ public class UserBalanceService {
         UserBalance userBalance = userBalanceRepository.findById(userId)
                 .orElseThrow(() -> new NotFoundException("User not found"));
         return userBalanceMapper.toDto(userBalance);
+    }
+
+    @Transactional
+    public void updateUsersBalance(Map<UUID, BigDecimal> addByUserBalance) {
+        Instant now = Instant.now();
+        addByUserBalance.forEach((userId, delta) ->
+                userBalanceRepository.updateBalance(userId, delta, now)
+        );
     }
 }

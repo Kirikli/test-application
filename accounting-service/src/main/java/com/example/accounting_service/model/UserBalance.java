@@ -15,7 +15,7 @@ import java.util.UUID;
 @Table(name = "user_balance")
 public class UserBalance {
     @Id
-    @Column(name = "id")
+    @Column(name = "id", nullable = false, updatable = false)
     private UUID userId;
 
     @Column(name = "balance")

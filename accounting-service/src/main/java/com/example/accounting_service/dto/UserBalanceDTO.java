@@ -5,6 +5,6 @@ import java.util.UUID;
 
 public record UserBalanceDTO(
         UUID userId,
-        BigDecimal amount
+        BigDecimal balance
 ) {
 }

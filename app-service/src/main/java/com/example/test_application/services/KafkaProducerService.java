@@ -1,20 +1,18 @@
 package com.example.test_application.services;
 
-import asyncapi.event.TaskCompleteEvent;
-import asyncapi.event.KafkaEvent;
-import com.example.test_application.dto.event.TaskCompleteDTO;
-import com.example.test_application.dto.event.TaskAssignDTO;
-import com.example.test_application.dto.event.TaskCreateDTO;
 import asyncapi.event.AssignExecutorEvent;
+import asyncapi.event.KafkaEvent;
+import asyncapi.event.TaskCompleteEvent;
 import asyncapi.event.TaskCreateEvent;
+import com.example.test_application.dto.event.TaskAssignDTO;
+import com.example.test_application.dto.event.TaskCompleteDTO;
+import com.example.test_application.dto.event.TaskCreateDTO;
 import com.example.test_application.kafka.KafkaTopicsProperties;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.event.EventListener;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Component;
-
-import java.time.Instant;
 
 @RequiredArgsConstructor
 @Component
@@ -32,7 +30,7 @@ public class KafkaProducerService {
                 taskCreateDTO.name(),
                 taskCreateDTO.status());
 
-        kafkaTemplate.send(topics.createTask(), String.valueOf(event.id()), event)
+        kafkaTemplate.send(topics.task(), String.valueOf(event.id()), event)
                 .whenComplete((metadata, ex) -> {
                     if (ex != null) {
                         log.error("Failed to send task create event", ex);
@@ -51,7 +49,7 @@ public class KafkaProducerService {
                 assignDTO.status()
         );
 
-        kafkaTemplate.send(topics.assignExecutor(), String.valueOf(event.taskId()), event)
+        kafkaTemplate.send(topics.task(), String.valueOf(event.taskId()), event)
                 .whenComplete((metadata, ex) -> {
                     if (ex != null) {
                         log.error("Failed to send assign execute event", ex);
@@ -70,7 +68,7 @@ public class KafkaProducerService {
                 taskCompleteDTO.amount()
         );
 
-        kafkaTemplate.send(topics.taskComplete(), String.valueOf(event.taskId()), event)
+        kafkaTemplate.send(topics.task(), String.valueOf(event.taskId()), event)
                 .whenComplete((metadata, ex) -> {
                     if (ex != null) {
                         log.error("Failed to send assign complete task event", ex);

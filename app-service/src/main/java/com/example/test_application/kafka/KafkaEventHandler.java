@@ -12,8 +12,8 @@ import org.springframework.stereotype.Component;
 @Component
 @RequiredArgsConstructor
 @KafkaListener(
-        topics = "user-stream-topic",
-        groupId = "task-event")
+        topics = "${spring.kafka.topics.user-stream}",
+        groupId = "${spring.kafka.consumer.group-id}")
 public class KafkaEventHandler {
 
     private final UserService userService;

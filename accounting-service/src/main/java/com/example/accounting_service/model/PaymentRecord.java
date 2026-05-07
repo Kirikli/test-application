@@ -12,24 +12,20 @@ import java.util.UUID;
 @Entity
 @Table(name = "payment_record")
 public class PaymentRecord {
-
     @Id
-    @Column(name = "id")
-    @GeneratedValue(strategy = GenerationType.UUID)
-    private UUID id;
-
-    @Column(name = "user_id")
-    private UUID userId;
-
-    @Column(name = "task_id")
+    @Column(name = "task_id", nullable = false, updatable = false)
     private UUID taskId;
 
-    @Column(name = "amount")
+    @Column(name = "user_id", nullable = false, updatable = false)
+    private UUID userId;
+
+    @Column(name = "amount", nullable = false, updatable = false)
     private BigDecimal amount;
 
     @Column(name = "date")
     private Instant date;
 
-    @Column(name = "status")
+    @Enumerated(EnumType.STRING)
+    @Column(name = "status", nullable = false)
     private PaymentStatus status;
 }

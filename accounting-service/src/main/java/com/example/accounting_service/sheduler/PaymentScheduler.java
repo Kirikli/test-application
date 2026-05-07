@@ -25,24 +25,28 @@ public class PaymentScheduler {
 
     @Scheduled(cron = "0 0 0 */14 * *")
     //@Scheduled(cron = "0 */2 * * * *")
-    @Transactional
     public void processPayments() {
-        List<PaymentRecord> pending = paymentRecordService.findAllPending();
-
-        if (pending.isEmpty()) {
-            log.info("No pending payments found");
-            return;
+        int batchSize = 100;
+        while (true) {
+            List<PaymentRecord> pending = paymentRecordService.findPendingBatch(batchSize);
+            if (pending.isEmpty()) {
+                return;
+            }
+            processBatch(pending);
         }
+    }
 
-        Map<UUID, List<PaymentRecord>> byUser = pending.stream()
-                .collect(Collectors.groupingBy(PaymentRecord::getUserId));
-
-        byUser.forEach((userId, records) -> {
-            BigDecimal payment = records.stream()
-                    .map(PaymentRecord::getAmount)
-                    .reduce(BigDecimal.ZERO, BigDecimal::add);
-            userBalanceService.updateAmount(userId, payment);
-            paymentRecordService.updatePaymentRecord(records);
-        });
+    @Transactional
+    public void processBatch(List<PaymentRecord> pending) {
+        Map<UUID, BigDecimal> deltasByUser = pending.stream()
+                .collect(Collectors.groupingBy(
+                        PaymentRecord::getUserId,
+                        Collectors.mapping(
+                                PaymentRecord::getAmount,
+                                Collectors.reducing(BigDecimal.ZERO, BigDecimal::add)
+                        )
+                ));
+        userBalanceService.updateUsersBalance(deltasByUser);
+        paymentRecordService.updatePaymentRecord(pending);
     }
 }

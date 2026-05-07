@@ -6,6 +6,9 @@ import com.example.test_application.dto.TaskDTO;
 import com.example.test_application.dto.UpdateTaskStatusDTO;
 import com.example.test_application.services.TaskService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.UUID;
@@ -19,9 +22,8 @@ public class TaskController {
 
     @GetMapping
     public PageResponseDTO<TaskDTO> getTasksPage(
-            @RequestParam(required = false, defaultValue = "1") int page,
-            @RequestParam(required = false, defaultValue = "50") int size) {
-        return taskService.getTaskPage(page, size);
+            @PageableDefault(size = 50, sort = "date", direction = Sort.Direction.DESC) Pageable pageable) {
+        return taskService.getTaskPage(pageable);
     }
 
     @GetMapping("/{id}")
