@@ -1,9 +1,9 @@
 package com.example.auth_service.service;
 
 import asyncapi.event.KafkaEvent;
-import com.example.auth_service.dto.event.UserRegisteredEvent;
-import asyncapi.event.UserFlowEvent;
-import asyncapi.event.UserStreamEvent;
+import asyncapi.event.UserRegisteredEvent;
+import asyncapi.event.UserCreateEvent;
+import com.example.auth_service.dto.event.UserRegisteredDTO;
 import com.example.auth_service.kafka.KafkaTopicsProperties;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -20,13 +20,13 @@ public class KafkaProducerService {
     private final KafkaTopicsProperties topics;
 
     @EventListener
-    public void handleUserRegistered(UserRegisteredEvent event) {
-        UserFlowEvent userFlow = new UserFlowEvent(
+    public void handleUserRegistered(UserRegisteredDTO event) {
+        UserRegisteredEvent userFlow = new UserRegisteredEvent(
                 event.id(),
                 event.createdAt()
         );
 
-        UserStreamEvent userStream = new UserStreamEvent(
+        UserCreateEvent userStream = new UserCreateEvent(
                 event.id(),
                 event.email(),
                 event.name(),

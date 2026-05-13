@@ -5,15 +5,46 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eb4ab6bd-753a-4f94-86e8-89067bbc7512" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/search-service/src/main/java/com/example/search_service/config/DatabaseInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search-service/src/main/java/com/example/search_service/controller/TaskController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search-service/src/main/java/com/example/search_service/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search-service/src/main/java/com/example/search_service/dto/UserDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search-service/src/main/java/com/example/search_service/filter/CheckRequestFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search-service/src/main/java/com/example/search_service/handler/KafkaTaskEventHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search-service/src/main/java/com/example/search_service/handler/KafkaUserEventHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search-service/src/main/java/com/example/search_service/kafka/KafkaConfigConsumer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search-service/src/main/java/com/example/search_service/kafka/KafkaConfigProducer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search-service/src/main/java/com/example/search_service/kafka/KafkaTopicsProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search-service/src/main/java/com/example/search_service/mapper/UserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search-service/src/main/java/com/example/search_service/model/Task.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search-service/src/main/java/com/example/search_service/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search-service/src/main/java/com/example/search_service/repository/TaskRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search-service/src/main/java/com/example/search_service/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search-service/src/main/java/com/example/search_service/service/KafkaProducerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search-service/src/main/java/com/example/search_service/service/TaskService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search-service/src/main/java/com/example/search_service/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search-service/src/main/resources/create_index.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounting-service/src/main/java/com/example/accounting_service/controller/AccountingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounting-service/src/main/java/com/example/accounting_service/controller/AccountingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounting-service/src/main/java/com/example/accounting_service/dto/UserBalanceDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounting-service/src/main/java/com/example/accounting_service/dto/UserBalanceDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/accounting-service/src/main/java/com/example/accounting_service/kafka/KafkaEventHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounting-service/src/main/java/com/example/accounting_service/kafka/KafkaEventHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounting-service/src/main/java/com/example/accounting_service/service/PaymentRecordService.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounting-service/src/main/java/com/example/accounting_service/service/PaymentRecordService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounting-service/src/main/java/com/example/accounting_service/service/UserBalanceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounting-service/src/main/java/com/example/accounting_service/service/UserBalanceService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounting-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/accounting-service/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/async-api/build/libs/async-api-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/async-api/build/libs/async-api-0.0.1-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/async-api/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/async-api/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app-service/src/main/java/com/example/test_application/kafka/KafkaEventHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/app-service/src/main/java/com/example/test_application/kafka/KafkaEventHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app-service/src/main/java/com/example/test_application/services/KafkaProducerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app-service/src/main/java/com/example/test_application/services/KafkaProducerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app-service/src/main/java/com/example/test_application/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app-service/src/main/java/com/example/test_application/services/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/async-api/src/main/java/asyncapi/event/AssignExecutorEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/async-api/src/main/java/asyncapi/event/TaskAssignExecutorEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/async-api/src/main/java/asyncapi/event/KafkaEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/async-api/src/main/java/asyncapi/event/KafkaEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/async-api/src/main/java/asyncapi/event/TaskCreateEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/async-api/src/main/java/asyncapi/event/TaskCreateEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/async-api/src/main/java/asyncapi/event/TaskStreamEvent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/async-api/src/main/java/asyncapi/event/UserFlowEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/async-api/src/main/java/asyncapi/event/UserRegisteredEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/async-api/src/main/java/asyncapi/event/UserStreamEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/async-api/src/main/java/asyncapi/event/UserCreateEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/async-api/src/main/java/asyncapi/util/PageResponseBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/async-api/src/main/java/asyncapi/util/PageResponseBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/example/auth_service/dto/event/UserRegisteredEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/example/auth_service/dto/event/UserRegisteredDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/example/auth_service/service/KafkaProducerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/example/auth_service/service/KafkaProducerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/example/auth_service/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/example/auth_service/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,8 +84,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Record" />
         <option value="Interface" />
+        <option value="Record" />
         <option value="Class" />
       </list>
     </option>
@@ -117,7 +148,7 @@
     &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Kirill/Downloads/test-application/async-api/src/main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Kirill/Downloads/test-application/search-service/src/main/java/com/example/search_service&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/Kirill/Downloads/test-application/api-gateway/src/main/java/org/example/Main.java&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
@@ -128,24 +159,25 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Kirill\Downloads\test-application\search-service\src\main\java\com\example\search_service" />
       <recent name="C:\Users\Kirill\Downloads\test-application\async-api\src\main" />
       <recent name="C:\Users\Kirill\Downloads\test-application\common\src\main\java\event" />
       <recent name="C:\Users\Kirill\Downloads\test-application\auth-service\src\main\java\com\example\auth_service" />
       <recent name="C:\Users\Kirill\Downloads\test-application\src\main\java\com\example\test_application" />
-      <recent name="C:\Users\Kirill\Downloads\test-application\src\main\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Kirill\Downloads\test-application" />
       <recent name="C:\Users\Kirill\Downloads\test-application\app-service" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.search_service.mapper" />
+      <recent name="com.example.search_service.service" />
       <recent name="com.example.accounting_service.filter" />
       <recent name="com.example.accounting_service.kafka" />
       <recent name="com.example.accounting_service.service" />
-      <recent name="enums" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.AccountingServiceApplication">
+  <component name="RunManager" selected="Spring Boot.TestApplication">
     <configuration name="test-application:api-gateway [bootRun]" type="GradleRunConfiguration" factoryName="Gradle" nameIsGenerated="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -256,11 +288,11 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.AccountingServiceApplication" />
-        <item itemvalue="Spring Boot.AuthServiceApplication" />
-        <item itemvalue="Spring Boot.TestApplication" />
-        <item itemvalue="Spring Boot.ApiGatewayApplication" />
         <item itemvalue="Docker.docker-compose.yaml.keycloak: Compose Deployment" />
+        <item itemvalue="Spring Boot.TestApplication" />
+        <item itemvalue="Spring Boot.AuthServiceApplication" />
+        <item itemvalue="Spring Boot.ApiGatewayApplication" />
+        <item itemvalue="Spring Boot.AccountingServiceApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -300,11 +332,6 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/auth-service/src/main/java/com/example/auth_service/service/UserService.java</url>
-          <line>33</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/api-gateway/src/main/java/org/example/Main.java</url>
           <line>13</line>
           <option name="timeStamp" value="3" />
@@ -318,11 +345,6 @@
           <url>file://$PROJECT_DIR$/app-service/src/main/java/com/example/test_application/filter/CheckRequestFilter.java</url>
           <line>22</line>
           <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/accounting-service/src/main/java/com/example/accounting_service/model/UserBalance.java</url>
-          <line>13</line>
-          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

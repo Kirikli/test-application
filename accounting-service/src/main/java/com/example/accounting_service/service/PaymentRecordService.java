@@ -2,11 +2,7 @@ package com.example.accounting_service.service;
 
 import asyncapi.enums.PaymentStatus;
 import asyncapi.event.TaskCompleteEvent;
-import asyncapi.util.PageResponseBuilder;
-import asyncapi.util.PageResponseDTO;
 import com.example.accounting_service.dto.PaymentEventDTO;
-import com.example.accounting_service.dto.PaymentRecordDTO;
-import com.example.accounting_service.mapper.PaymentRecordMapper;
 import com.example.accounting_service.model.PaymentRecord;
 import com.example.accounting_service.repository.PaymentRecordRepository;
 import lombok.RequiredArgsConstructor;
@@ -25,7 +21,6 @@ import java.util.UUID;
 @RequiredArgsConstructor
 public class PaymentRecordService {
 
-    private final PaymentRecordMapper paymentRecordMapper;
     private final PaymentRecordRepository paymentRecordRepository;
     private final ApplicationEventPublisher eventPublisher;
 
@@ -60,15 +55,8 @@ public class PaymentRecordService {
     }
 
     @Transactional(readOnly = true)
-    public PageResponseDTO<PaymentRecordDTO> getUserPayments(UUID userId, Pageable pageable) {
-        Page<PaymentRecord> payments = paymentRecordRepository.findAllByUserId(userId, pageable);
-
-        return PageResponseBuilder.of(
-                payments.getContent(),
-                payments.getTotalElements(),
-                payments.getTotalPages(),
-                paymentRecordMapper::toDto
-        );
+    public Page<PaymentRecord> getUserPayments(UUID userId, Pageable pageable) {
+        return paymentRecordRepository.findAllByUserId(userId, pageable);
     }
 
     @Transactional(readOnly = true)

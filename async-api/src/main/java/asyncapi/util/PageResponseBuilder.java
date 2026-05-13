@@ -16,4 +16,8 @@ public class PageResponseBuilder {
 
         return new PageResponseDTO<>(result, totalElements, totalPages);
     }
+
+    public static <T> PageResponseDTO<T> empty() {
+        return new PageResponseDTO<>(List.of(), 0, 0);
+    }
 }

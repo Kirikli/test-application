@@ -1,11 +1,13 @@
 package com.example.accounting_service.kafka;
 
+import asyncapi.event.KafkaEvent;
 import asyncapi.event.TaskCompleteEvent;
-import asyncapi.event.UserStreamEvent;
+import asyncapi.event.UserCreateEvent;
 import com.example.accounting_service.service.PaymentRecordService;
 import com.example.accounting_service.service.UserBalanceService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.kafka.annotation.KafkaHandler;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;
 
@@ -28,8 +30,13 @@ public class KafkaEventHandler {
     @KafkaListener(
             topics = "${spring.kafka.topics.user-stream}",
             groupId = "${spring.kafka.consumer.group-id}")
-    public void handleCreateUserBalance(UserStreamEvent userStreamEvent) {
-        log.info("Received event user balance create: {}", userStreamEvent);
-        userBalanceService.createUserBalance(userStreamEvent.id());
+    public void handleCreateUserBalance(UserCreateEvent userCreateEvent) {
+        log.info("Received event user balance create: {}", userCreateEvent);
+        userBalanceService.createUserBalance(userCreateEvent.id());
+    }
+
+    @KafkaHandler(isDefault = true)
+    public void ignore(KafkaEvent event) {
+        log.info("Ignored event: {}", event);
     }
 }

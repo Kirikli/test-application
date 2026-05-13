@@ -3,7 +3,7 @@ package com.example.test_application.services;
 import asyncapi.exception.NotFoundException;
 import com.example.test_application.model.User;
 import com.example.test_application.repositories.UserRepository;
-import asyncapi.event.UserStreamEvent;
+import asyncapi.event.UserCreateEvent;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -22,13 +22,13 @@ public class UserService {
     }
 
     @Transactional
-    public void createUser(UserStreamEvent userStreamEvent) {
+    public void createUser(UserCreateEvent userCreateEvent) {
         User user = new User();
-        user.setId(userStreamEvent.id());
-        user.setName(userStreamEvent.name());
-        user.setEmail(userStreamEvent.email());
-        user.setBirthday(userStreamEvent.birthday());
-        user.setCreatedAt(userStreamEvent.createdAt());
+        user.setId(userCreateEvent.id());
+        user.setName(userCreateEvent.name());
+        user.setEmail(userCreateEvent.email());
+        user.setBirthday(userCreateEvent.birthday());
+        user.setCreatedAt(userCreateEvent.createdAt());
         userRepository.save(user);
     }
 }

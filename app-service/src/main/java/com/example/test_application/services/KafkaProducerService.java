@@ -1,6 +1,6 @@
 package com.example.test_application.services;
 
-import asyncapi.event.AssignExecutorEvent;
+import asyncapi.event.TaskAssignExecutorEvent;
 import asyncapi.event.KafkaEvent;
 import asyncapi.event.TaskCompleteEvent;
 import asyncapi.event.TaskCreateEvent;
@@ -28,7 +28,8 @@ public class KafkaProducerService {
                 taskCreateDTO.id(),
                 taskCreateDTO.description(),
                 taskCreateDTO.name(),
-                taskCreateDTO.status());
+                taskCreateDTO.status(),
+                taskCreateDTO.amount());
 
         kafkaTemplate.send(topics.task(), String.valueOf(event.id()), event)
                 .whenComplete((metadata, ex) -> {
@@ -43,7 +44,7 @@ public class KafkaProducerService {
     @EventListener
     public void handleTaskAssignExecutor(TaskAssignDTO assignDTO) {
 
-        AssignExecutorEvent event = new AssignExecutorEvent(
+        TaskAssignExecutorEvent event = new TaskAssignExecutorEvent(
                 assignDTO.taskId(),
                 assignDTO.executorId(),
                 assignDTO.status()

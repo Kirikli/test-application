@@ -25,6 +25,7 @@
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.46/a5cfe99fdf320e84955ef653f2ce1bf789d11385/lombok-1.18.46.jar" />
         </processorPath>
         <module name="test-application.accounting-service.test" />
+        <module name="test-application.search-service.test" />
         <module name="test-application.api-gateway.main" />
         <module name="test-application.api-gateway.test" />
       </profile>
@@ -34,6 +35,7 @@
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.46/a5cfe99fdf320e84955ef653f2ce1bf789d11385/lombok-1.18.46.jar" />
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mapstruct/mapstruct-processor/1.6.3/52e345c907fbf173b376586c7f8b131d53fa5867/mapstruct-processor-1.6.3.jar" />
         </processorPath>
+        <module name="test-application.search-service.main" />
         <module name="test-application.accounting-service.main" />
       </profile>
     </annotationProcessing>
@@ -53,6 +55,9 @@
       <module name="test-application.auth-service" options="-parameters" />
       <module name="test-application.auth-service.main" options="-parameters" />
       <module name="test-application.auth-service.test" options="-parameters" />
+      <module name="test-application.search-service" options="-parameters" />
+      <module name="test-application.search-service.main" options="-parameters" />
+      <module name="test-application.search-service.test" options="-parameters" />
     </option>
   </component>
 </project>

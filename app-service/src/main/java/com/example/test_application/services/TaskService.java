@@ -2,15 +2,12 @@ package com.example.test_application.services;
 
 import asyncapi.enums.TaskStatus;
 import asyncapi.event.TaskCreateEvent;
+import asyncapi.event.TaskUpdateEvent;
 import asyncapi.exception.NotFoundException;
-import asyncapi.util.PageResponseBuilder;
-import asyncapi.util.PageResponseDTO;
-import com.example.test_application.dto.CreateTaskDTO;
-import com.example.test_application.dto.TaskDTO;
 import com.example.test_application.dto.UpdateTaskStatusDTO;
 import com.example.test_application.dto.event.TaskAssignDTO;
 import com.example.test_application.dto.event.TaskCompleteDTO;
-import com.example.test_application.mappers.TaskMapper;
+import com.example.test_application.dto.event.TaskCreateDTO;
 import com.example.test_application.model.Task;
 import com.example.test_application.model.User;
 import com.example.test_application.repositories.TaskRepository;
@@ -31,51 +28,42 @@ import java.util.UUID;
 public class TaskService {
 
     private final TaskRepository taskRepository;
-    private final TaskMapper taskMapper;
     private final UserService userService;
     private final ApplicationEventPublisher eventPublisher;
 
     @Transactional(readOnly = true)
-    public TaskDTO getTaskById(UUID taskId) {
-        Task task = taskRepository.findById(taskId)
+    public Task getTaskById(UUID taskId) {
+        return taskRepository.findById(taskId)
                 .orElseThrow(() -> new NotFoundException(
                         "Task with id " + taskId + " not found"
                 ));
-        return taskMapper.toDto(task);
     }
 
     @Transactional(readOnly = true)
-    public PageResponseDTO<TaskDTO> getTaskPage(Pageable pageable) {
+    public Page<Task> getTaskPage(Pageable pageable) {
 
-        Page<Task> tasks = taskRepository.findAll(pageable);
-
-        return PageResponseBuilder.of(
-                tasks.getContent(),
-                tasks.getTotalElements(),
-                tasks.getTotalPages(),
-                taskMapper::toDto
-        );
+        return taskRepository.findAll(pageable);
     }
 
     @Transactional
-    public TaskDTO createTask(CreateTaskDTO createTaskDTO) {
-        Task task = taskMapper.toEntity(createTaskDTO);
+    public Task createTask(Task task) {
         task = taskRepository.save(task);
 
         eventPublisher.publishEvent(
-                new TaskCreateEvent(
+                new TaskCreateDTO(
                         task.getId(),
                         task.getDescription(),
                         task.getName(),
-                        task.getStatus()
+                        task.getStatus(),
+                        task.getAmount()
                 )
         );
 
-        return taskMapper.toDto(task);
+        return task;
     }
 
     @Transactional
-    public TaskDTO updateTaskStatus(UUID taskId, UpdateTaskStatusDTO statusDTO) {
+    public Task updateTaskStatus(UUID taskId, UpdateTaskStatusDTO statusDTO) {
         Task task = taskRepository.findById(taskId)
                 .orElseThrow(() -> new NotFoundException(
                         "Task with id " + taskId + " not found"
@@ -96,11 +84,11 @@ public class TaskService {
             sendCompleteTask(task);
         }
 
-        return taskMapper.toDto(taskRepository.save(task));
+        return taskRepository.save(task);
     }
 
     @Transactional
-    public TaskDTO assignExecutor(UUID taskId, UUID executorId) {
+    public Task assignExecutor(UUID taskId, UUID executorId) {
 
         Task task = taskRepository.findById(taskId)
                 .orElseThrow(() -> new NotFoundException("Task not found"));
@@ -122,7 +110,7 @@ public class TaskService {
                 )
         );
 
-        return taskMapper.toDto(task);
+        return task;
     }
 
     private void sendCompleteTask(Task task) {
@@ -135,5 +123,20 @@ public class TaskService {
                         Instant.now()
                 )
         );
+    }
+
+    @Transactional
+    public void updateTask(TaskUpdateEvent taskUpdateEvent) {
+        Task task = taskRepository.findById(taskUpdateEvent.taskId())
+                .orElseThrow(() -> new NotFoundException("Task not found: " + taskUpdateEvent.taskId()));
+
+        if (taskUpdateEvent.newName() != null) {
+            task.setName(taskUpdateEvent.newName());
+        }
+        if (taskUpdateEvent.newDescription() != null) {
+            task.setDescription(taskUpdateEvent.newDescription());
+        }
+
+        taskRepository.save(task);
     }
 }

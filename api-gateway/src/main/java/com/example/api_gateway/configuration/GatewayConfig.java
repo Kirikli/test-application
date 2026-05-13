@@ -36,6 +36,13 @@ public class GatewayConfig {
                                 .filter(headerAddFilter))
                         .uri("http://localhost:8084")
                 )
+                .route("search-service", r -> r
+                        .path("/api/search/**")
+                        .filters(f -> f
+                                .filter(tokenValidationFilter)
+                                .filter(headerAddFilter))
+                        .uri("http://localhost:8085")
+                )
                 .build();
     }
 }

@@ -18,6 +18,9 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/auth-service/test-application.auth-service.iml" filepath="$PROJECT_DIR$/.idea/modules/auth-service/test-application.auth-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/auth-service/test-application.auth-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/auth-service/test-application.auth-service.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/auth-service/test-application.auth-service.test.iml" filepath="$PROJECT_DIR$/.idea/modules/auth-service/test-application.auth-service.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/search-service/test-application.search-service.iml" filepath="$PROJECT_DIR$/.idea/modules/search-service/test-application.search-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/search-service/test-application.search-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/search-service/test-application.search-service.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/search-service/test-application.search-service.test.iml" filepath="$PROJECT_DIR$/.idea/modules/search-service/test-application.search-service.test.iml" />
     </modules>
   </component>
 </project>

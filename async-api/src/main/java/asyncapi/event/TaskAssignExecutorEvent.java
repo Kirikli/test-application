@@ -4,7 +4,7 @@ import asyncapi.enums.TaskStatus;
 
 import java.util.UUID;
 
-public record AssignExecutorEvent(
+public record TaskAssignExecutorEvent(
         UUID taskId,
         UUID executorId,
         TaskStatus status) implements KafkaEvent {

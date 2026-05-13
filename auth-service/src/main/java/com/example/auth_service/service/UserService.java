@@ -2,7 +2,7 @@ package com.example.auth_service.service;
 
 import com.example.auth_service.dto.RegistryDTO;
 import com.example.auth_service.dto.UserDTO;
-import com.example.auth_service.dto.event.UserRegisteredEvent;
+import com.example.auth_service.dto.event.UserRegisteredDTO;
 import com.example.auth_service.exception.UserAlreadyExistsException;
 import com.example.auth_service.keycloak.KeycloakService;
 import com.example.auth_service.mapper.UserMapper;
@@ -45,7 +45,7 @@ public class UserService {
         user = userRepository.save(user);
 
         eventPublisher.publishEvent(
-                new UserRegisteredEvent(
+                new UserRegisteredDTO(
                         user.getId(),
                         user.getEmail(),
                         user.getName(),
